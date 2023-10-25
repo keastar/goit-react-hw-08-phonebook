@@ -1,0 +1,11 @@
+.Container {
+    display: flex;
+    max-width: 1200px;
+    flex-direction: column;
+    height: 700px;
+    align-items: left;
+    font-size: 40;
+    color: #010101;
+    margin: 0px auto;
+    padding: 0px 16px;
+}

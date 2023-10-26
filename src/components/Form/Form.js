@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from '../../redux/contacts/operations';
 import { selectContacts } from '../../redux/contacts/selectors';
 
-export default function Form() {
+export const Form = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
 
@@ -26,26 +26,26 @@ export default function Form() {
   };
 
   return (
-    <Form>
-      <h3>Phonebook</h3>
-      <form className={css.form} onSubmit={handleSubmit}>
-        <label className={css.label}>
-          Name:
-          <input
-            type="text"
-            name="name"
-            pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-            title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-            required
-            className={css.label_input}
-          />
-        </label>
-        <label className={css.label}>
-          tel:
-          <input type="tel" name="number" className={css.label_input} />
-        </label>
-        <button type="submit">Add contact</button>
-      </form>
+    // <Form className={css.form}>
+    //   <h3>Phonebook</h3>
+    <Form className={css.form} onSubmit={handleSubmit}>
+      <label className={css.label}>
+        Name:
+        <input
+          type="text"
+          name="name"
+          pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+          title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+          required
+          className={css.label_input}
+        />
+      </label>
+      <label className={css.label}>
+        tel:
+        <input type="tel" name="number" className={css.label_input} />
+      </label>
+      <button type="submit">Add contact</button>
     </Form>
+    // </Form>
   );
-}
+};

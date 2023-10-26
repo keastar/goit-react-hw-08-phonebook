@@ -9,7 +9,7 @@ export const Layout = () => {
   return (
     <div className={css.Container}>
       <AppMenu />
-      <Suspense fallback={<div>Loading page...</div>}>
+      <Suspense fallback={null}>
         <Outlet />
       </Suspense>
       {/* <Toaster position="top-right" reverseOrder={false} /> */}

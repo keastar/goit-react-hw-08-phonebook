@@ -44,6 +44,7 @@ export const RegisterForm = () => {
               name="name"
               value={name}
               onChange={handleChange}
+              autoComplete="off"
             />
           </label>
           <label className={css.label}>
@@ -53,6 +54,7 @@ export const RegisterForm = () => {
               name="email"
               value={email}
               onChange={handleChange}
+              autoComplete="off"
             />
           </label>
           <label className={css.label}>
@@ -62,6 +64,7 @@ export const RegisterForm = () => {
               name="password"
               value={password}
               onChange={handleChange}
+              autoComplete="off"
             />
           </label>
           <button type="submit" className={css.button}>

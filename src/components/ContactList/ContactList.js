@@ -26,27 +26,27 @@ const ContactList = () => {
   const visibleContacts = getVisibleContacts();
 
   return (
-    <>
-      {contacts && (
-        <ul className={css.contactList}>
-          {visibleContacts.map(({ id, name, phone }) => (
-            <li key={id} className={css.contactList_item}>
-              <p>
-                {name} {phone}
-              </p>
-              <button
-                type="button"
-                className={css.btn}
-                id={id}
-                onClick={handleDelete}
-              >
-                Delete
-              </button>
-            </li>
-          ))}
-        </ul>
-      )}
-    </>
+    <ContactList>
+      {/* {contacts && ( */}
+      <ul className={css.contactList}>
+        {visibleContacts.map(({ id, name, phone }) => (
+          <li key={id} className={css.contactList_item}>
+            <p>
+              {name} {phone}
+            </p>
+            <button
+              type="button"
+              className={css.btn}
+              id={id}
+              onClick={handleDelete}
+            >
+              Delete
+            </button>
+          </li>
+        ))}
+      </ul>
+      {/* )} */}
+    </ContactList>
   );
 };
 

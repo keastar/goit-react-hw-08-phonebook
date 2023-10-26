@@ -26,7 +26,7 @@ export default function Form() {
   };
 
   return (
-    <>
+    <Form>
       <h3>Phonebook</h3>
       <form className={css.form} onSubmit={handleSubmit}>
         <label className={css.label}>
@@ -46,6 +46,6 @@ export default function Form() {
         </label>
         <button type="submit">Add contact</button>
       </form>
-    </>
+    </Form>
   );
 }

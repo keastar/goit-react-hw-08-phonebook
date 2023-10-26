@@ -1,3 +1,4 @@
+import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import css from './LoginForm.module.css';
@@ -30,7 +31,7 @@ export const LoginForm = () => {
     <div>
       <h1>Логинизация</h1>
 
-      <form onSubmit={handleSubmit} className={css.form} autocomplete="off">
+      <form onSubmit={handleSubmit} className={css.form} autoComplete="off">
         <label className={css.label}>
           Email:
           <input
@@ -40,6 +41,7 @@ export const LoginForm = () => {
             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
             required
             onChange={handleChange}
+            // autoComplete="username"
           />
         </label>
         <label className={css.label}>
@@ -49,6 +51,7 @@ export const LoginForm = () => {
             name="password"
             value={password}
             onChange={handleChange}
+            // autoComplete="current-password"
           />
         </label>
         <button type="submit" className={css.button}>

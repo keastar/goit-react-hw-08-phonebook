@@ -7,8 +7,8 @@ import { Route, Routes } from 'react-router-dom';
 // import Form from './components/Form/Form';
 // import ContactList from '../ContactList/ContactList';
 import { Layout } from './components/Layout/Layout';
-// import { PrivateRoute } from './PrivateRoute';
-// import { RestrictedRoute } from './RestrictedRoute';
+import { PrivateRoute } from './PrivateRoute';
+import { RestrictedRoute } from './RestrictedRoute';
 // import { Navigation } from './components/Navigation/Navigation';
 // import { AuthNav } from 'components/AuthNav/AuthNav';
 // import { UserMenu } from 'components/UserMenu/UserMenu';
@@ -39,52 +39,43 @@ export const App = () => {
   }, [dispatch]);
 
   return (
-    // <Container>
-    //   <AppMenu />
-    //   <Suspense fallback={<div>Loading page...</div>}>
-    //     <Routes>
-    //       <Route exact path="/" component={HomeView} />
-    //       <Route path="/register" component={RegisterView} />
-    //       <Route path="/login" component={LoginView} />
-    //       <Route path="/contacts" component={ContactsView} />
-    //     </Routes>
-    //   </Suspense>
-    // </Container>
-
-    isRefreshing ? (
-      <b> Refresh user... </b>
-    ) : (
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<HomeView />} />
-          <Route
-            path="register"
-            // element={
-            //   <RestrictedRoute
-            //     redirectTo="/contacts"
-            element={<RegisterView />}
-          />
-          {/* } /> */}
-          <Route
-            path="login"
-            // element={
-            //   <RestrictedRoute
-            //     redirectTo="/contacts"
-            element={<LoginView />}
-          />
-          {/* }
-          /> */}
-          <Route
-            path="contacts"
-            // element={
-            //   <PrivateRoute
-            //     redirectTo="/login"
-            element={<ContactsView />}
-          />
-          {/* }
-          /> */}
-        </Route>
-      </Routes>
-    )
+    <>
+      {isRefreshing ? (
+        <b> Refresh user... </b>
+      ) : (
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<HomeView />} />
+            <Route
+              path="register"
+              element={
+                <RestrictedRoute
+                  redirectTo="/contacts"
+                  component={<RegisterView />}
+                />
+              }
+            />
+            <Route
+              path="login"
+              element={
+                <RestrictedRoute
+                  redirectTo="/contacts"
+                  component={<LoginView />}
+                />
+              }
+            />
+            <Route
+              path="contacts"
+              element={
+                <PrivateRoute
+                  redirectTo="/login"
+                  component={<ContactsView />}
+                />
+              }
+            />
+          </Route>
+        </Routes>
+      )}
+    </>
   );
 };

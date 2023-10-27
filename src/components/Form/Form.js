@@ -26,9 +26,7 @@ export const Form = () => {
   };
 
   return (
-    // <Form className={css.form}>
-    //   <h3>Phonebook</h3>
-    <Form className={css.form} onSubmit={handleSubmit}>
+    <form className={css.form} onSubmit={handleSubmit}>
       <label className={css.label}>
         Name:
         <input
@@ -45,7 +43,6 @@ export const Form = () => {
         <input type="tel" name="number" className={css.label_input} />
       </label>
       <button type="submit">Add contact</button>
-    </Form>
-    // </Form>
+    </form>
   );
 };

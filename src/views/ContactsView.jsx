@@ -17,10 +17,10 @@ export const ContactsView = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <>
       <Form />
       <div>{isLoading && 'Request in progress...'}</div>
       <ContactList />
-    </div>
+    </>
   );
 };

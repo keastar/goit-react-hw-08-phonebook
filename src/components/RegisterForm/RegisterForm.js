@@ -32,46 +32,44 @@ export const RegisterForm = () => {
   };
 
   return (
-    <>
-      <div>
-        <h1>Регистрация</h1>
+    <div>
+      <h1>Регистрация</h1>
 
-        <form className={css.form} onSubmit={handleSubmit} autoComplete="off">
-          <label className={css.label}>
-            Username
-            <input
-              type="text"
-              name="name"
-              value={name}
-              onChange={handleChange}
-              autoComplete="off"
-            />
-          </label>
-          <label className={css.label}>
-            Email
-            <input
-              type="email"
-              name="email"
-              value={email}
-              onChange={handleChange}
-              autoComplete="off"
-            />
-          </label>
-          <label className={css.label}>
-            Password
-            <input
-              type="password"
-              name="password"
-              value={password}
-              onChange={handleChange}
-              autoComplete="off"
-            />
-          </label>
-          <button type="submit" className={css.button}>
-            Register
-          </button>
-        </form>
-      </div>
-    </>
+      <form className={css.form} onSubmit={handleSubmit} autoComplete="off">
+        <label className={css.label}>
+          Username
+          <input
+            type="text"
+            name="name"
+            value={name}
+            onChange={handleChange}
+            autoComplete="off"
+          />
+        </label>
+        <label className={css.label}>
+          Email
+          <input
+            type="email"
+            name="email"
+            value={email}
+            onChange={handleChange}
+            autoComplete="off"
+          />
+        </label>
+        <label className={css.label}>
+          Password
+          <input
+            type="password"
+            name="password"
+            value={password}
+            onChange={handleChange}
+            autoComplete="off"
+          />
+        </label>
+        <button type="submit" className={css.button}>
+          Register
+        </button>
+      </form>
+    </div>
   );
 };

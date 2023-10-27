@@ -1,8 +1,8 @@
 .Container {
     display: flex;
-    max-width: 1200px;
+    max-width: 1920px;
     flex-direction: column;
-    height: 700px;
+    height: 1280px;
     align-items: left;
     font-size: 40;
     color: #010101;

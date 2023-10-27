@@ -26,7 +26,7 @@ export const ContactList = () => {
   const visibleContacts = getVisibleContacts();
 
   return (
-    <ContactList>
+    <>
       {contacts && (
         <ul className={css.contactList}>
           {visibleContacts.map(({ id, name, phone }) => (
@@ -46,6 +46,6 @@ export const ContactList = () => {
           ))}
         </ul>
       )}
-    </ContactList>
+    </>
   );
 };

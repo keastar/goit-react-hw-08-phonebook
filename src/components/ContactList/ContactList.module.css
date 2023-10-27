@@ -10,9 +10,9 @@
 }
 
 .contactList_item {
-display: flex;
-align-items: center;
-align-content: space-between;
+    display: flex;
+    align-items: center;
+    align-content: space-between;
 }
 
 .contactList_item_label {
@@ -25,16 +25,22 @@ align-content: space-between;
 }
 
 p {
-display: flex;
-font-size: 9pt;
-width: 150px;
+    display: flex;
+    font-size: 9pt;
+    width: 150px;
 }
 
 .btn {
-display: block;
-width: 50px;
-height: 20px;
-
-font-size: 9pt;
-margin: auto 12px;
-}
+    
+    margin: 0px;
+    color: black;
+    background-color: rgb(238, 238, 238);
+    width: 70px;
+    height: 30px;
+    border: 1px;
+    border-radius: 5px;
+}    
+    
+.btn:active {
+    box-shadow: 1px 1px 2px 1px rgba(52, 52, 52, 0.2);
+        }

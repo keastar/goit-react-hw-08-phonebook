@@ -47,7 +47,7 @@ export const App = () => {
           <Route path="/" element={<Layout />}>
             <Route index element={<HomeView />} />
             <Route
-              path="register"
+              path="/register"
               element={
                 <RestrictedRoute
                   redirectTo="/contacts"
@@ -56,7 +56,7 @@ export const App = () => {
               }
             />
             <Route
-              path="login"
+              path="/login"
               element={
                 <RestrictedRoute
                   redirectTo="/contacts"
@@ -65,7 +65,7 @@ export const App = () => {
               }
             />
             <Route
-              path="contacts"
+              path="/contacts"
               element={
                 <PrivateRoute
                   redirectTo="/login"

@@ -44,7 +44,7 @@ h3 {
     margin: 0;
 }
 
-button {
+.button {
     margin: 0px;
     color: black;
     background-color: rgb(238, 238, 238);
@@ -52,7 +52,7 @@ button {
     height: 30px;
     border: 1px;
     border-radius: 5px;
-    margin: 12px;
+    margin-left: 12px;
 }
 
 .button:active {

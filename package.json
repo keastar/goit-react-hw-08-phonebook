@@ -5,7 +5,6 @@
   "homepage": "https://keastar.github.io/goit-react-hw-08-phonebook/",
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@reactivers/hooks": "^1.0.15",
     "@reduxjs/toolkit": "^1.9.7",
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
@@ -19,7 +18,7 @@
     "react-router": "^6.17.0",
     "react-router-dom": "^6.17.0",
     "react-router-private-route": "^0.0.3",
-    "react-scripts": "^5.0.1",
+    "react-scripts": "^3.0.1",
     "redirect": "^0.2.0",
     "redux-persist": "^6.0.0",
     "toaster": "^0.1.2",

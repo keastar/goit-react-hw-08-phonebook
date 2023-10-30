@@ -12,7 +12,7 @@ export const Form = () => {
     event.preventDefault();
     const form = event.target;
     const name = form.name.value;
-    const phone = form.number.value;
+    const number = form.number.value;
 
     if (
       contacts.find(
@@ -21,7 +21,7 @@ export const Form = () => {
     ) {
       return alert('Already exist contact');
     }
-    dispatch(addContact({ name, phone }));
+    dispatch(addContact({ name, number }));
     form.reset();
   };
 
@@ -42,7 +42,7 @@ export const Form = () => {
         tel:
         <input type="tel" name="number" className={css.label_input} />
       </label>
-      <button type="submit">Add contact</button>
+      <button type="submit" className={css.button}>Add contact</button>
     </form>
   );
 };

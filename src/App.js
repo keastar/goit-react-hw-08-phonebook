@@ -14,7 +14,7 @@ import { RestrictedRoute } from './RestrictedRoute';
 // import { UserMenu } from 'components/UserMenu/UserMenu';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { refreshUser } from 'redux/auth/operations';
+import { refreshUser } from './redux/auth/operations';
 import { authSelectors } from './redux/auth/selectors';
 
 import { HomeView } from './views/HomeView';
@@ -50,28 +50,20 @@ export const App = () => {
               path="/register"
               element={
                 <RestrictedRoute
+                  component={RegisterView}
                   redirectTo="/contacts"
-                  component={<RegisterView />}
                 />
               }
             />
             <Route
               path="/login"
               element={
-                <RestrictedRoute
-                  redirectTo="/contacts"
-                  component={<LoginView />}
-                />
+                <RestrictedRoute component={LoginView} redirectTo="/contacts" />
               }
             />
             <Route
               path="/contacts"
-              element={
-                <PrivateRoute
-                  redirectTo="/login"
-                  component={<ContactsView />}
-                />
-              }
+              element={<PrivateRoute redirectTo="/" component={ContactsView} />}
             />
           </Route>
         </Routes>

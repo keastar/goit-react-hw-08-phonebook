@@ -93,7 +93,7 @@ export const LoginForm = () => {
           size="md"
           height="35px"
           width="150px"
-          margin="25px auto 16px"
+          margin="25px auto 56px"
           borderRadius="35px"
         >
           LogIn

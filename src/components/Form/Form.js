@@ -1,5 +1,6 @@
 import React from 'react';
 import css from './Form.module.css';
+import { Input, Button } from '@chakra-ui/react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from '../../redux/contacts/operations';
 import { selectContacts } from '../../redux/contacts/selectors';
@@ -29,7 +30,10 @@ export const Form = () => {
     <form className={css.form} onSubmit={handleSubmit}>
       <label className={css.label}>
         Name:
-        <input
+        <Input
+          placeholder="Enter your Name"
+          size="sm"
+          variant="flushed"
           type="text"
           name="name"
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -40,9 +44,32 @@ export const Form = () => {
       </label>
       <label className={css.label}>
         tel:
-        <input type="tel" name="number" className={css.label_input} />
+        <Input
+          placeholder="Enter your number"
+          size="sm"
+          variant="flushed"
+          type="tel"
+          name="number"
+          className={css.label_input}
+        />
       </label>
-      <button type="submit" className={css.button}>Add contact</button>
+      <Button
+        type="submit"
+        // className={css.button}
+        color="rgb(68, 68, 68)"
+        // colorScheme="blue"
+        backgroundColor="rgb(255, 255, 255)"
+        size="md"
+        height="35px"
+        width="150px"
+        margin="14px auto 16px"
+        borderRadius="35px"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+      >
+        Add contact
+      </Button>
     </form>
   );
 };

@@ -1,11 +1,34 @@
-.link {
+.link_h {
     display: inline-block;
     text-decoration: none;
+    letter-spacing: -1px;
     padding: 12px;
-    font-weight: 700;
-    color: #2a363b;
+    font-weight: 500;
+    color: rgba(42, 54, 60, .6);
+    /* margin-right: 216px; */
 }
 
-.link.active {
+.link_c {
+    display: inline-block;
+    text-decoration: none;
+    letter-spacing: -1px;
+    padding: 12px;
+    font-weight: 500;
+    color: rgba(42, 54, 60, .6)
+}
+
+.link_h:hover {
+    color: #f0a6b0;
+}
+
+.link_c:hover {
+    color: #f0a6b0;
+}
+
+.link_h:active {
+    color: #e84a5f;
+}
+
+.link_c:active {
     color: #e84a5f;
 }

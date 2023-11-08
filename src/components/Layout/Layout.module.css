@@ -1,11 +1,16 @@
 .Container {
     display: flex;
-    max-width: 1920px;
+    max-width: 520px;
     flex-direction: column;
-    height: 1280px;
-    align-items: left;
+    align-items: center;
     font-size: 40;
     color: #010101;
-    margin: 0px auto;
-    padding: 0px 16px;
+    margin: 50px auto;
+    margin-bottom: 50px;
+    padding: 0px 16px;  
+    background-color: rgba(255,255,255, .35);
+    
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px 1px rgba(52, 52, 52, 0.1);
+    
 }

@@ -8,6 +8,8 @@ import Filter from '../components/Filter/Filter';
 import { fetchContacts } from '../redux/contacts/operations';
 import { selectIsLoading } from '../redux/contacts/selectors';
 import { ContactList } from '../components/ContactList/ContactList';
+import { Spinner } from '@chakra-ui/react';
+// import { ChakraProvider } from '@chakra-ui/react';
 
 export const ContactsView = () => {
   const dispatch = useDispatch();
@@ -21,10 +23,20 @@ export const ContactsView = () => {
     <>
       <Form />
       <Filter />
-      <div className={css.contactList}>
-        {isLoading && 'Request in progress...'}
+      <div className={css.contactList_item_label_spin}>
+        {isLoading ? (
+          <Spinner
+            thickness="4px"
+            speed="0.65s"
+            emptyColor="gray.200"
+            color="blue.500"
+            size="lg"
+          />
+        ) : (
+          // 'Request in progress...'
+          <ContactList />
+        )}
       </div>
-      <ContactList />
     </>
   );
 };

@@ -38,8 +38,3 @@ export const deleteContact = createAsyncThunk(
     }
   }
 );
-
-// export async function fetchContactById(id) {
-//   const { data } = await axios.get('/contacts/:id');
-//   return data;
-// }

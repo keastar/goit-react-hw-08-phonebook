@@ -10,8 +10,6 @@ export const RegisterForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  // const [value, setValue] = useState('');
-  // const handleChange = event => setValue(event.target.value);
 
   const handleChange = ({ target: { name, value } }) => {
     switch (name) {
@@ -110,9 +108,6 @@ export const RegisterForm = () => {
           display="flex"
           justifyContent="center"
           alignItems="center"
-
-          // marginBottom="16px"
-          // className={css.button}
         >
           Register
         </Button>

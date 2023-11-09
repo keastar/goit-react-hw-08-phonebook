@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Bello Pro';
+    src: url('Bello-Pro.eot');
+    src: local('Bello Pro'), local('Bello-Pro'),
+        url('Bello-Pro.eot?#iefix') format('embedded-opentype'),
+        url('Bello-Pro.woff2') format('woff2'),
+        url('Bello-Pro.woff') format('woff'),
+        url('Bello-Pro.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

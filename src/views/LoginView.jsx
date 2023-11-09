@@ -1,10 +1,10 @@
 import React from 'react';
 import { LoginForm } from '../components/LoginForm/LoginForm';
 
-export const LoginView = () => {
+export default function LoginView() {
   return (
     <div>
       <LoginForm />
     </div>
   );
-};
+}

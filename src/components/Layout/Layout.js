@@ -3,7 +3,7 @@ import { Suspense } from 'react';
 import { AppMenu } from '../AppMenu/AppMenu';
 import { Outlet } from 'react-router-dom';
 import css from './Layout.module.css';
-// import { Toaster } from 'react-hot-toast';
+// import { Spinner } from '@chakra-ui/react';
 
 export const Layout = () => {
   return (

@@ -55,9 +55,7 @@ export const Form = () => {
       </label>
       <Button
         type="submit"
-        // className={css.button}
         color="rgb(68, 68, 68)"
-        // colorScheme="blue"
         backgroundColor="rgb(255, 255, 255)"
         size="md"
         height="35px"

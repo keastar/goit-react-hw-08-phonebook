@@ -1,7 +1,7 @@
 import React from 'react';
 import { RegisterForm } from '../components/RegisterForm/RegisterForm';
 
-export const RegisterView = () => {
+export default function RegisterView() {
   return (
     <div>
       <RegisterForm />

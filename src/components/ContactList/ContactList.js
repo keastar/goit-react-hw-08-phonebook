@@ -40,10 +40,10 @@ export const ContactList = () => {
                 className={css.btn}
                 id={id}
                 onClick={handleDelete}
-                colorScheme="blue"
+                // colorScheme="blue"
                 size="sm"
                 height="30px"
-                width="70px"
+                width="65px"
                 borderRadius="35px"
                 display="flex"
                 justifyContent="center"

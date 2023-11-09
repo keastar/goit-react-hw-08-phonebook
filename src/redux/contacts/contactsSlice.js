@@ -42,12 +42,6 @@ export const contactsSlice = createSlice({
     },
 
     [deleteContact.rejected]: handleRejected,
-
-    // [logOut.fulfilled](state) {
-    //   state.items = [];
-    //   state.error = null;
-    //   state.isLoading = false;
-    // },
   },
 });
 export const contactsReducer = contactsSlice.reducer;

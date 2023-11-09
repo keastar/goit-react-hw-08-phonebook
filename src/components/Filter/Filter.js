@@ -18,13 +18,11 @@ const Filter = () => {
       Фильтр по имени:{' '}
       {/* <input type="text" name="filter" onChange={handleFilter} /> */}
       <Input
-        // placeholder="Enter your number"
         size="md"
         variant="outline"
         backgroundColor="white"
         type="text"
         name="filter"
-        // className={css.label_input}
         onChange={handleFilter}
       />
     </label>

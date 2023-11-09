@@ -1,7 +1,7 @@
 import React from 'react';
 import css from './HomeView.module.css';
 
-export const HomeView = () => {
+export default function HomeView() {
   return (
     <>
       <div className={css.container}>
@@ -9,4 +9,4 @@ export const HomeView = () => {
       </div>
     </>
   );
-};
+}

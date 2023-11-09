@@ -1,7 +1,6 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import { Route } from 'react-router-dom';
 import css from '../components/ContactList/ContactList.module.css';
 import { Form } from '../components/Form/Form';
 import Filter from '../components/Filter/Filter';
@@ -9,9 +8,8 @@ import { fetchContacts } from '../redux/contacts/operations';
 import { selectIsLoading } from '../redux/contacts/selectors';
 import { ContactList } from '../components/ContactList/ContactList';
 import { Spinner } from '@chakra-ui/react';
-// import { ChakraProvider } from '@chakra-ui/react';
 
-export const ContactsView = () => {
+export default function ContactsView() {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectIsLoading);
 
@@ -33,10 +31,9 @@ export const ContactsView = () => {
             size="lg"
           />
         ) : (
-          // 'Request in progress...'
           <ContactList />
         )}
       </div>
     </>
   );
-};
+}
